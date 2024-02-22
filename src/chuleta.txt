@@ -1,0 +1,10 @@
+
+catkin_make
+source devel/setup.bash
+
+-- Iniciamos el entorno --
+roslaunch turtlebot3_gazebo <mundo>
+
+-- Iniciamos el algoritmo de aprendizaje --
+roslaunch my_turtlebot3_openai_example start_training.launch
+
