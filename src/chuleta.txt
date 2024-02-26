@@ -3,8 +3,31 @@ catkin_make
 source devel/setup.bash
 
 -- Iniciamos el entorno --
-roslaunch turtlebot3_gazebo <mundo>
+roslaunch my_turtlebot3_openai_example start_simulation.launch
 
 -- Iniciamos el algoritmo de aprendizaje --
 roslaunch my_turtlebot3_openai_example start_training.launch
+
+
+roslaunch my_turtlebot3_openai_example start_simulation.launch && roslaunch my_turtlebot3_openai_example start_training.launch
+
+
+Intalaciones simuladores turtlebot3
+https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/
+https://automaticaddison.com/how-to-launch-the-turtlebot3-simulation-with-ros/
+
+Ros Noetic install
+http://wiki.ros.org/noetic/Installation/Ubuntu
+
+Repositories used
+https://bitbucket.org/theconstructcore/openai_ros/src/kinetic-devel/
+https://bitbucket.org/theconstructcore/openai_examples_projects/src/master/
+
+Videos
+https://www.youtube.com/watch?v=mwGj1rjVtw4&t=1076s
+https://www.youtube.com/watch?v=VBPQRGPqd9I
+
+Hubo que arreglar el environment del turtlebot3 ya que en wait_until_twist_achieved hacia unas comprobaciones
+angulares en negativo en un sitio mientras que en otro sitio no lo hacia en negativo
+y no entraba a una condicion cuando giraba
 
